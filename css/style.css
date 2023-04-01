@@ -1,0 +1,115 @@
+:root {
+    --my-padding: 0.4rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    color: white;
+    font-size: x-large;
+    display: grid;
+    grid-template-areas: 
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main  main extra extra"
+    "banner banner banner banner"
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 2fr 0.8fr 0.8fr 0.5fr;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header {
+    align-items: center;
+    background-color: black;
+    display: grid;
+    grid-area: header;
+    padding: var(--my-padding);
+}
+
+.menu {
+    align-items: center;
+    background-color: red;
+    display: grid;
+    grid-area: menu;
+    padding: var(--my-padding);
+}
+
+.hero {
+    align-items: center;
+    background-color: darkcyan;
+    display: grid;
+    grid-area: hero;
+    padding: var(--my-padding);
+}
+
+.main {
+    align-items: center;
+    background-color: darkred;
+    display: grid;
+    grid-area: main;
+    padding: var(--my-padding);
+}
+
+.image {
+    align-items: center;
+    background-color: plum;
+    display: grid;
+    grid-area: image;
+    padding: var(--my-padding);
+}
+
+.extra {
+    align-items: center;
+    background-color: green;
+    display: grid;
+    grid-area: extra;
+    padding: var(--my-padding);
+}
+
+.banner {
+    align-items: center;
+    background-color: orangered;
+    display: grid;
+    grid-area: banner;
+    padding: var(--my-padding);
+}
+
+@media (max-width:768px) { /* TABLET */
+    .container {
+        grid-template-areas: 
+        "header header header"
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu extra image"
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.18fr 1fr 1fr 0.27fr 0.27fr;
+    }
+}
+
+@media (max-width:480px) { /* MOBILE */
+    .container {
+        grid-template-areas: 
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.28fr 0.28fr 0.8fr 1fr 0.5fr 0.5fr 0.5fr;
+    }
+}
+
+
